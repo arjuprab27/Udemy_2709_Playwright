@@ -22,7 +22,7 @@ module.exports = defineConfig({
         browserName: 'chromium',
         channel: 'chrome',
         screenshot: 'on',
-        headless: false,
+        headless: !!process.env.CI,
         viewport: null,
         launchOptions: {
           args: ['--start-maximized'],
